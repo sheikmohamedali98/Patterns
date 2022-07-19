@@ -25,6 +25,7 @@ public class PatternController {
 //		pattern.holloSquare(n);
 //		pattern.hollReverseTriangle(n);
 		pattern.binaryPattern(n);
+		patter.numberPrymidPatten(n);
 	}
 
 }
