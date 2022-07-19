@@ -23,9 +23,12 @@ public class Patterns {
 
 	/*
 	 * Right Angle Triangle Pattren
-	 * 
-	 * * * * * * * * * * *
-	 * 
+	 
+	 *  
+	 * * 
+	 * * *
+	 * * * * 
+	 * * * * *
 	 * 
 	 */
 
@@ -381,6 +384,31 @@ public class Patterns {
 			}
 			for (int col = 1; col <= print; col++) {
 				System.out.print("* ");
+			}
+			System.out.println();
+		}
+	}
+	/*
+	 * 
+	 *    
+	1
+   121
+  12321
+ 1234321
+123454321
+
+	 */
+	public void numberPrymidPatten(int n){
+		
+		for(int row=1;row<=n;row++){
+			for(int space=1;space<=n-row;space++){
+				System.out.print(" ");
+			}
+			for(int col=1;col<=row;col++){
+				System.out.print(col);
+			}
+			for(int i=row-1;i>=1;i--){
+				System.out.print(i);
 			}
 			System.out.println();
 		}
