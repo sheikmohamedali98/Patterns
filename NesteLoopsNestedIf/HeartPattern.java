@@ -1,11 +1,26 @@
 package NesteLoopsNestedIf;
 
+
+/*
+        A
+       BBB
+      CCCCC
+     DDDDDDD
+    EEEEEEEEE
+   FFFFFFFFFFF
+  GGGGGGGGGGGGG
+ HHHHHHHHHHHHHHH
+IIIIIIIIIIIIIIIII
+ JJJJJJ  JJJJJJ
+  KKKK    KKKK
+   LL      LL
+*/
 public class HeartPattern {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-
+//Enter even Number
 		printPattern(20);
 	}
 	
