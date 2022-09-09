@@ -23,6 +23,8 @@ public class Array {
 		String[][] str = {{"luke","shaw"},{"wayne","rooney"},{"rooney","ronaldo"},{"shaw","rooney"}};
 		System.out.println("count of Grandson  "+grandSonFind(str, "ronaldo"));
 		
+		int[] arrayWeight = {49,36,8,10,12};
+		weightSortIn2dArray(arrayWeight);
 
 	}
 
@@ -164,6 +166,43 @@ public class Array {
 		}
 		return count;
 	}
+	
+	private static void  weightSortIn2dArray(int[] arr) {
+		int[][] ans = new int[arr.length][2];
+		
+		int count;
+		for(int i=0;i<arr.length;i++) {
+			count = 0;
+			if(Math.sqrt(arr[i])%1 == 0) {
+				count += 5;
+			} if(arr[i]%4 == 0&&arr[i]%6 == 0) {
+				count += 4;
+			}if(arr[i]%2 == 0) {
+				count += 3;
+			}
+			ans[i][0] = arr[i];
+			ans[i][1] = count;
+			
+		}
+		
+		
+		System.out.println(Arrays.deepToString(ans));
+		
+		for(int i = 0;i<ans.length;i++) {
+			for(int j = i+1 ;j<ans.length;j++) {
+				if(ans[i][1]<ans[j][1]) {
+					ans[i][1] = ans[i][1] + ans[j][1] - (ans[j][1] = ans[i][1]);
+					ans[i][0] = ans[i][0] + ans[j][0] - (ans[j][0] = ans[i][0]);
+//					int temp = ans[i][1];
+//					ans[i][1] = ans[j][1];
+//					ans[j][1] = temp;
+				}
+				
+			}
+		}
+		System.out.println(Arrays.deepToString(ans));
+	}
+//[[49, 12], [36, 7], [8, 5], [10, 3], [12, 3]]	
 }
 
 
